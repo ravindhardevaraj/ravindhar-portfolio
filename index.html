@@ -5,6 +5,7 @@
 <meta name="description" content="Ravindhar Devaraj, AI Marketer: social media marketing, video editing and AI marketing for brands.">
 <meta property="og:title" content="Ravindhar Devaraj — AI Marketer">
 <meta property="og:description" content="Social media marketing, video editing and AI marketing for brands.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Ravindhar Devaraj — AI Marketer</title>
 <style>
@@ -238,11 +239,215 @@
     .contact{align-items:flex-start;padding-top:12vh}
   }
   @media (min-width:821px){ .infos{display:contents} }
+
+  /* ================= round 7 additions ================= */
+  .nowp{display:flex;align-items:center}
+  .nowp .logo{width:24px;height:24px;margin-right:11px;flex:none}
+  .logo .dot{animation:dotp 2.4s ease-in-out infinite}
+  @keyframes dotp{50%{opacity:.4}}
+  /* carousels */
+  .car{position:relative}
+  .car .ar{position:absolute;top:50%;z-index:3;width:54px;height:54px;margin-top:-27px;border-radius:50%;border:1px solid rgba(255,255,255,.22);background:rgba(10,10,14,.72);backdrop-filter:blur(8px);
+    display:grid;place-items:center;cursor:pointer;transition:opacity .3s,background .2s,transform .2s;box-shadow:0 10px 30px -8px rgba(0,0,0,.8)}
+  .car .ar svg{width:22px;height:22px;fill:none;stroke:#fff;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+  .car .ar:hover{background:var(--lime);transform:scale(1.06)} .car .ar:hover svg{stroke:#0B0B10}
+  .car .ar.off{opacity:0;pointer-events:none}
+  .ve .car .prev{left:10px} .ve .car .next{right:calc(5vw + 10px)}
+  .strip{scroll-behavior:auto}
+  /* highlights */
+  .hl-bar{display:flex;justify-content:space-between;align-items:center;margin:-.6em 0 20px}
+  .filters{display:flex;flex-wrap:wrap;gap:8px}
+  .filters button{font:inherit;font-size:13.5px;font-weight:600;padding:9px 15px;border-radius:999px;border:1px solid var(--line);background:none;color:#cfd1d6;cursor:pointer;transition:.2s}
+  .filters button:hover{border-color:#4a4a66;color:#fff}
+  .filters button.on{background:#f2f2f0;color:#0B0B10;border-color:transparent}
+  .hl{padding-right:0}
+  .hl .tile{height:clamp(280px,23vw,360px);aspect-ratio:3/4}
+  .hl .tile.w2{aspect-ratio:3/2}
+  .hl .tile[hidden]{display:none}
+  .hlcar .prev{left:-22px} .hlcar .next{right:-22px}
+  .hl.swap .tile{animation:hlin .55s cubic-bezier(.2,.8,.2,1) both}
+  .hl.swap .tile:nth-child(n+2){animation-delay:.05s} .hl.swap .tile:nth-child(n+3){animation-delay:.1s}
+  @keyframes hlin{from{opacity:0;transform:translateX(40px)}}
+  .k.m{color:#ff8fb0}
+  .tile .cap .watch{display:flex;width:max-content;margin-top:9px;padding:6px 11px;border-radius:999px;background:rgba(255,255,255,.16);backdrop-filter:blur(6px);color:#fff;font-size:12px;font-weight:700;text-decoration:none}
+  .tile .cap .watch:hover{background:var(--lime);color:#0B0B10}
+  .h45{aspect-ratio:4/5}
+  /* playbook deck */
+  .deck .c{overflow:hidden}
+  .deck .c .ci{position:absolute;right:12px;top:12px;width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;opacity:.85}
+  .deck .c .deco{position:absolute;inset:0;pointer-events:none;-webkit-mask-image:linear-gradient(transparent 38%,#000 85%);mask-image:linear-gradient(transparent 38%,#000 85%)}
+  .deck .c::before{content:"";position:absolute;inset:0;background:linear-gradient(140deg,rgba(255,255,255,.35),transparent 40%);pointer-events:none}
+  .deck .c1 .deco{background:repeating-radial-gradient(circle at 100% 100%,rgba(0,0,0,.16) 0 2px,transparent 2px 13px)}
+  .deck .c2 .deco{background:radial-gradient(rgba(0,0,0,.25) 1.3px,transparent 1.6px) 0 0/12px 12px}
+  .deck .c3 .deco{-webkit-mask-image:none;mask-image:none;background:
+     linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)) 14px 100%/16px 18% no-repeat,linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)) 38px 100%/16px 28% no-repeat,
+     linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)) 62px 100%/16px 22% no-repeat,linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)) 86px 100%/16px 36% no-repeat,linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)) 110px 100%/16px 48% no-repeat}
+  .deck .c4 .deco{background:linear-gradient(rgba(0,0,0,.14) 1px,transparent 1px) 0 0/100% 16px,linear-gradient(90deg,rgba(0,0,0,.14) 1px,transparent 1px) 0 0/21px 100%}
+  .deck .c:nth-child(5){background:linear-gradient(150deg,#ff8a6b,#ff3d7f);color:#0B0B10}
+  .deck .c5 .deco{background:repeating-radial-gradient(circle at 88% 92%,rgba(0,0,0,.18) 0 3px,transparent 3px 11px)}
+  /* about: lens marquee */
+  .bio{font-size:clamp(15px,1.15vw,19px)}
+  .lens{position:relative;overflow:hidden;margin:0 -5vw;padding:0 0 36px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+  .lens-track,.lens-track .dup{display:flex;width:max-content}
+  .lens-track{animation:lensmove 110s linear infinite}
+  .lens:hover .lens-track{animation-play-state:paused}
+  @keyframes lensmove{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .grp{display:flex;gap:22px;padding-right:22px;align-items:flex-start}
+  .lens figure{flex:none;width:clamp(170px,15vw,230px);background:#f3f1ea;padding:10px 10px 0;border-radius:3px;transform:rotate(var(--r));transform-origin:50% -14px;
+    box-shadow:0 18px 30px -12px rgba(0,0,0,.8);transition:transform .45s cubic-bezier(.2,.8,.2,1);margin-top:14px;position:relative}
+  .lens figure::before{content:"";position:absolute;top:-16px;left:50%;width:10px;height:22px;border-radius:2px;transform:translateX(-50%);background:linear-gradient(#c9a46a,#8d6c3c)}
+  .lens figure:hover{transform:rotate(0) translateY(-6px) scale(1.04)}
+  .lens img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;pointer-events:none}
+  .lens figcaption{color:#333;font-size:12px;padding:9px 2px 11px;letter-spacing:.04em}
+  .ctag{flex:none;position:relative;margin:14px 10px 0 30px;padding:16px 18px 14px;border-radius:10px;background:var(--lime);color:#0B0B10;font-weight:800;font-size:clamp(20px,1.7vw,26px);line-height:1;font-stretch:112%;
+    transform-origin:50% -14px;animation:wig 3.8s ease-in-out infinite;box-shadow:0 16px 28px -12px rgba(0,0,0,.8);white-space:nowrap}
+  .ctag::before{content:"";position:absolute;top:-16px;left:50%;width:10px;height:22px;border-radius:2px;transform:translateX(-50%);background:linear-gradient(#c9a46a,#8d6c3c)}
+  .ctag small{display:block;font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;opacity:.65;margin-top:8px;font-stretch:100%}
+  .grp.bt .ctag{background:var(--violet);animation-delay:-1.2s} .grp.os .ctag{background:#ffb86b;animation-delay:-2.3s}
+  @keyframes wig{0%,100%{transform:rotate(-2.2deg)}50%{transform:rotate(2.2deg)}}
+  @media (prefers-reduced-motion:reduce){.lens-track,.ctag,.logo .dot{animation:none}}
+  /* dock label */
+  #dockOrb .lbl{right:76px;padding:10px 16px 10px 14px;background:var(--lime);color:#0B0B10;font-weight:800;font-size:14.5px;border:0;box-shadow:0 10px 34px -8px rgba(198,244,50,.7);
+    opacity:0;transform:translateY(-50%) translateX(10px);transition:opacity .3s,transform .3s;display:flex;align-items:center;gap:8px}
+  #dockOrb .lbl::after{content:"";position:absolute;right:-7px;top:50%;margin-top:-7px;border-left:8px solid var(--lime);border-top:7px solid transparent;border-bottom:7px solid transparent}
+  #dockOrb .lbl i{width:8px;height:8px;border-radius:50%;background:#0B0B10;animation:dotp 1.4s ease-in-out infinite}
+  #dockOrb .lbl b{font-size:16px}
+  #dockOrb:hover .lbl,#dockOrb.hint .lbl{opacity:1;transform:translateY(-50%)}
+  /* services chips */
+  .info ul.chips li{padding:0;background:none;border-radius:0}
+  .chip{font:inherit;font-size:12.5px;font-weight:600;padding:6px 11px;border-radius:999px;background:#1a1a22;color:#e6e7ea;border:1px solid #2c2c38;cursor:pointer;display:inline-flex;gap:6px;align-items:center;text-decoration:none;transition:background .2s,color .2s,border-color .2s}
+  .chip i{font-style:normal;opacity:.75;font-size:11px}
+  .info.ai .chip.go:hover,.chip.flow:hover,.chip.flow.on,.chip.tipc:hover{background:var(--violet);color:#0B0B10;border-color:transparent}
+  .info.so .chip.go:hover{background:var(--lime);color:#0B0B10;border-color:transparent}
+  .chip.plain{cursor:default;opacity:.7}
+  .tipwrap{position:relative}
+  .tip{position:absolute;left:50%;bottom:calc(100% + 12px);width:260px;padding:14px 16px;border-radius:14px;background:#f2f2f0;color:#24242c;font-size:13px;line-height:1.5;font-weight:500;
+    box-shadow:0 22px 44px -10px rgba(0,0,0,.75);opacity:0;pointer-events:none;transform:translate(-50%,8px);transition:opacity .25s,transform .25s;z-index:7}
+  .tip b{display:block;font-size:14px;margin-bottom:4px;color:#5b47ff}
+  .tip::after{content:"";position:absolute;left:50%;top:100%;margin-left:-7px;border:7px solid transparent;border-top-color:#f2f2f0}
+  .tipwrap:hover .tip,.tipwrap:focus-within .tip,.tipwrap.open .tip{opacity:1;transform:translate(-50%,0)}
+  .info.ai .tip{left:-20px;transform:translate(0,8px)} .info.ai .tipwrap:hover .tip,.info.ai .tipwrap:focus-within .tip,.info.ai .tipwrap.open .tip{transform:translate(0,0)} .info.ai .tip::after{left:46px}
+  .flowcard{position:absolute;left:calc(100% + 18px);top:0;width:380px;padding:20px 22px;border-radius:20px;background:rgba(12,12,18,.96);border:1px solid rgba(140,123,255,.55);
+    box-shadow:0 0 80px -20px var(--violet);z-index:6;animation:fcin .4s cubic-bezier(.2,.8,.2,1)}
+  .flowcard[hidden]{display:none}
+  @keyframes fcin{from{opacity:0;transform:translateX(-14px)}}
+  .fc-head .n8n{display:inline-block;font-weight:800;font-size:12px;padding:3px 8px;border-radius:6px;background:#ea4b71;color:#fff;margin-bottom:8px}
+  .fc-head b{display:block;font-size:18px} .fc-head small{color:var(--fog);font-size:12.5px}
+  .nodes{list-style:none;margin:16px 0 12px;position:relative}
+  .nodes::before{content:"";position:absolute;left:17px;top:18px;bottom:18px;width:2px;background:linear-gradient(var(--violet),var(--lime))}
+  .nodes li{position:relative;display:flex;gap:12px;align-items:center;padding:6px 0;animation:nodein .4s both}
+  .nodes li:nth-child(2){animation-delay:.08s}.nodes li:nth-child(3){animation-delay:.16s}.nodes li:nth-child(4){animation-delay:.24s}.nodes li:nth-child(5){animation-delay:.32s}.nodes li:nth-child(6){animation-delay:.4s}
+  @keyframes nodein{from{opacity:0;transform:translateY(6px)}}
+  .nodes i{flex:none;width:36px;height:36px;border-radius:10px;display:grid;place-items:center;font-style:normal;font-size:16px;background:#1b1b25;border:1px solid #33334a;position:relative;z-index:1}
+  .nodes li:last-child i{background:#25D366;border-color:transparent}
+  .nodes span{font-size:12.5px;color:#aeb1b8;line-height:1.35} .nodes span b{display:block;color:#f2f2f0;font-size:13.5px}
+  .nodes::after{content:"";position:absolute;left:14px;top:18px;width:8px;height:8px;border-radius:50%;background:#fff;box-shadow:0 0 10px #fff;animation:pulse-run 2.6s linear infinite}
+  @keyframes pulse-run{from{top:18px;opacity:0}10%{opacity:1}90%{opacity:1}to{top:calc(100% - 22px);opacity:0}}
+  .info .nodes li{background:none;border-radius:0;padding:6px 0;font-size:inherit;color:inherit}
+  body.fc-open .orb.ai{opacity:0!important;pointer-events:none}
+  .fc-foot{font-size:12.5px;color:#c9cbd0;border-top:1px solid var(--line);padding-top:10px}
+  /* contact: brief + TTA */
+  .contact{height:auto;min-height:100vh;padding-top:10vh;padding-bottom:8vh}
+  .briefbtn{margin-top:18px;width:100%;display:grid;grid-template-columns:auto 1fr;column-gap:16px;align-items:center;text-align:left;padding:16px 20px;border-radius:16px;border:0;cursor:pointer;
+    background:var(--lime);color:#0B0B10;font:inherit;box-shadow:0 18px 50px -18px rgba(198,244,50,.6);transition:transform .25s}
+  .briefbtn:hover{transform:translateY(-3px)}
+  .clap{grid-row:span 2;width:50px;height:40px;border-radius:6px;background:#0B0B10;position:relative;margin-top:14px}
+  .clap::before{content:"";position:absolute;left:0;top:-10px;width:50px;height:11px;border-radius:3px;background:repeating-linear-gradient(-45deg,#f2f2f0 0 7px,#0B0B10 7px 14px);transform-origin:2px 100%;transform:rotate(-20deg);transition:transform .25s cubic-bezier(.5,1.8,.5,1)}
+  .briefbtn:hover .clap::before{transform:rotate(0)}
+  .clap i{position:absolute;left:8px;right:8px;height:2px;background:#3a3a46} .clap i:nth-child(1){top:12px}.clap i:nth-child(2){top:20px}.clap i:nth-child(3){top:28px}.clap i:nth-child(4){display:none}
+  .bt{font-weight:800;font-size:20px;line-height:1.1} .bt small{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.6;font-weight:700;margin-bottom:3px}
+  .bm{font-size:12.5px;opacity:.7;font-weight:600}
+  .tta{display:block;margin-top:16px;padding:18px 20px;border-radius:16px;border:1px solid #2f2240;text-decoration:none;
+    background:linear-gradient(120deg,rgba(214,0,60,.16),rgba(139,0,149,.14) 50%,rgba(61,0,214,.18));transition:border-color .25s,transform .25s}
+  .tta:hover{border-color:#8B0095;transform:translateY(-2px)}
+  .tta-k{display:block;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:#d9a3e6}
+  .tta-h{display:block;font-size:clamp(18px,1.5vw,22px);font-weight:800;font-stretch:112%;margin:6px 0 10px;line-height:1.2}
+  .tta-l{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:14px}
+  .tta .dots{display:inline-flex} .tta .dots i{width:12px;height:12px;border-radius:50%;margin-right:-4px;border:2px solid #0B0B10}
+  .tta .dots i:nth-child(1){background:#D6003C}.tta .dots i:nth-child(2){background:#8B0095}.tta .dots i:nth-child(3){background:#3D00D6}
+
+  .notifs{height:72px;display:flex;align-items:center;justify-content:center;perspective:600px}
+  .ntf{display:flex;gap:12px;align-items:center;width:min(440px,88vw);padding:12px 16px;border-radius:20px;text-align:left;
+    background:rgba(38,38,48,.62);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.13);box-shadow:0 20px 50px -16px rgba(0,0,0,.85),0 0 40px -18px var(--violet);opacity:0}
+  .ntf svg{width:40px;height:40px;flex:none}
+  .ntf .nt{flex:1;min-width:0}
+  .ntf .nt>b{display:flex;justify-content:space-between;font-size:14px} .ntf .nt>b small{color:var(--fog);font-weight:500;font-size:12px}
+  .ntf p{font-size:14px;color:#d9dbe0;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis} .ntf p b{color:var(--lime)}
+  .ntf.in{animation:ntin .6s cubic-bezier(.2,.9,.25,1.15) both} .ntf.out{animation:ntout .5s ease-in both}
+  @keyframes ntin{from{opacity:0;transform:translateY(-34px) scale(.96)}to{opacity:1;transform:none}}
+  @keyframes ntout{from{opacity:1;transform:none}to{opacity:0;transform:translateY(-22px) scale(.97)}}
+  /* consistent carousel arrows: inside each strip, 14px from both visible edges */
+  .car .prev,.ve .car .prev,.hlcar .prev{left:14px} .car .next,.ve .car .next,.hlcar .next{right:14px}
+  .ve > .car{margin-right:5vw} .ve > .car .strip{padding-right:0}
+  .also .car{flex:1;min-width:0;margin-right:5vw} .also .car .strip{padding-right:0}
+  .thumbs .tile{height:250px}
+  @media (max-width:820px){ .car .prev,.ve .car .prev,.hlcar .prev{left:10px} .car .next,.ve .car .next,.hlcar .next{right:10px}
+    .ve > .car,.also .car{margin-right:6vw} }
+  /* brief modal */
+  .brief{position:fixed;inset:0;z-index:50;display:grid;place-items:center;background:rgba(4,5,5,.74);backdrop-filter:blur(10px);padding:3vh 3vw;animation:bfade .3s}
+  .brief[hidden]{display:none}
+  @keyframes bfade{from{opacity:0}}
+  .sheet{width:min(980px,100%);max-height:94vh;overflow:auto;background:#0d0d12;border:1px solid #2a2a36;border-radius:24px;padding:24px 28px;box-shadow:0 40px 120px -30px rgba(140,123,255,.45);animation:sheetin .5s cubic-bezier(.2,.8,.2,1)}
+  @keyframes sheetin{from{opacity:0;transform:translateY(30px) scale(.97)}}
+  .b-top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
+  .b-scene{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--lime);font-weight:700}
+  .sheet h3{font-size:clamp(24px,2.6vw,36px);font-stretch:118%;margin-top:4px;letter-spacing:-.02em}
+  .b-x{width:40px;height:40px;border-radius:50%;border:1px solid #2a2a36;background:#15151c;color:#fff;cursor:pointer;font-size:15px}
+  .tl{position:relative;margin:18px 0 22px;height:46px;border-radius:10px;background:#15151c;border:1px solid #23232d;
+    background-image:repeating-linear-gradient(90deg,#2a2a36 0 1px,transparent 1px 20px);background-size:100% 7px;background-repeat:no-repeat}
+  .tl-clips{display:grid;grid-template-columns:repeat(3,1fr);height:100%;gap:4px;padding:10px 6px 6px}
+  .tl-clips span{border-radius:5px;font-size:11px;font-weight:800;display:flex;align-items:center;padding:0 9px;color:#0B0B10;opacity:.28;transition:opacity .4s;letter-spacing:.06em;text-transform:uppercase}
+  .tl-clips span:nth-child(1){background:var(--lime)}.tl-clips span:nth-child(2){background:var(--violet)}.tl-clips span:nth-child(3){background:#f2f2f0}
+  .tl-clips span.done{opacity:1}
+  .ph{position:absolute;top:-4px;bottom:-4px;left:0;width:2px;background:#ff4d4d;transition:left .55s cubic-bezier(.2,.8,.2,1);box-shadow:0 0 10px #ff4d4d}
+  .ph i{position:absolute;top:-2px;left:-6px;border-left:7px solid transparent;border-right:7px solid transparent;border-top:9px solid #ff4d4d}
+  .b-main{display:grid;grid-template-columns:1.45fr 1fr;gap:26px;min-height:290px}
+  .st{display:none}.st.on{display:block;animation:stin .45s cubic-bezier(.2,.8,.2,1)}
+  @keyframes stin{from{opacity:0;transform:translateX(26px)}}
+  .st h4{font-size:22px;font-weight:800;font-stretch:110%}
+  .hint{color:var(--fog);font-size:13.5px;margin:4px 0 16px}
+  .opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .opts.one{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+  .opts button{font:inherit;font-size:14.5px;font-weight:600;text-align:left;padding:14px;border-radius:14px;border:1px solid #2a2a36;background:#15151c;color:#e9e9ec;cursor:pointer;display:flex;gap:10px;align-items:center;transition:background .2s,transform .2s,border-color .2s}
+  .opts button i{font-style:normal;font-size:18px}
+  .opts button:hover{border-color:#4a4a66}
+  .opts button.sel{background:var(--lime);color:#0B0B10;border-color:transparent;transform:translateY(-2px)}
+  .fields{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+  .fields .full{grid-column:1/-1}
+  .fields span{display:block;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--fog);margin-bottom:6px}
+  .fields input{width:100%;font:inherit;font-size:15px;padding:13px 14px;border-radius:12px;border:1px solid #2a2a36;background:#15151c;color:#fff;outline:none}
+  .fields input:focus{border-color:var(--lime)}
+  .preview{border-radius:18px;padding:16px;display:flex;flex-direction:column;align-items:flex-end;background:#0b141a;
+    background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1.4px);background-size:14px 14px}
+  .preview small{align-self:flex-start;color:var(--fog);font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+  .bubble{background:#005c4b;color:#e9edef;border-radius:12px 0 12px 12px;padding:10px 12px;font-size:13.5px;line-height:1.5;white-space:pre-wrap;max-width:100%}
+  .bubble .ph2{opacity:.5}
+  .ticks{color:#53bdeb;font-size:12px;margin-top:4px}
+  .b-foot{display:flex;align-items:center;gap:14px;margin-top:22px;flex-wrap:wrap}
+  .b-back{background:none;border:0;color:var(--fog);font:inherit;cursor:pointer}
+  .b-back:disabled{opacity:.3;cursor:default}
+  .b-err{flex:1;color:#ff9a9a;font-size:13px}
+  .b-next,.b-send{font:inherit;font-weight:800;font-size:15px;padding:13px 22px;border-radius:999px;border:0;cursor:pointer;background:var(--lime);color:#0B0B10}
+  .b-send{background:#25D366;display:inline-flex;gap:8px;align-items:center}
+  .b-send svg{width:18px;height:18px;fill:none;stroke:#0B0B10;stroke-width:2.2;stroke-linejoin:round}
+  .b-mail{color:var(--fog);font-size:13px}
+  .b-send[hidden],.b-mail[hidden],.b-next[hidden]{display:none}
+  @media (max-width:820px){
+    .ve .car .prev{left:4px} .ve .car .next{right:calc(6vw + 4px)} .car .ar{width:44px;height:44px;margin-top:-22px}
+    .hlcar .prev{left:-8px} .hlcar .next{right:-8px}
+    .hl .tile{height:360px}
+    .flowcard{position:relative;left:auto;width:auto;margin-top:12px}
+    .tip{width:220px}
+    .b-main{grid-template-columns:1fr} .opts{grid-template-columns:1fr} .fields{grid-template-columns:1fr} .sheet{padding:20px}
+    .tl-clips span{font-size:9px;padding:0 5px}
+    .contact{padding-bottom:60vh}
+    .ctag{margin-left:20px}
+  }
 </style>
 </head>
 <body>
 
-<button id="dockOrb" aria-label="Go to contact"><span class="r"></span><span class="r"></span><span class="r"></span><span class="core"></span><span class="lbl">Let's talk</span></button>
+<button id="dockOrb" aria-label="Go to contact"><span class="r"></span><span class="r"></span><span class="r"></span><span class="core"></span><span class="lbl"><i></i>Let's talk <b>→</b></span></button>
 <div id="stage" class="fade">
   <video id="idleC" src="assets/idle_clean.mp4" poster="assets/poster_clean.jpg" muted playsinline preload="auto"></video>
   <video id="idleP" src="assets/idle.mp4" muted playsinline preload="auto"></video>
@@ -258,7 +463,7 @@
 <section class="hero" id="hero">
   <div class="me fade"><video src="assets/idle_clean.mp4" poster="assets/poster_clean.jpg" muted playsinline loop autoplay preload="auto"></video></div>
   <div class="copy">
-    <div class="eyebrow"><i class="rec"></i>Now playing</div>
+    <div class="eyebrow nowp"><svg class="logo" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="24" fill="#0B0B10" stroke="#2a2a36" stroke-width="3"/><circle cx="50" cy="50" r="30" fill="none" stroke="#f2f2f0" stroke-width="7"/><circle class="dot" cx="50" cy="50" r="16" fill="#C6F432"/></svg>Now playing</div>
     <h1>Ravindhar<br>Devaraj</h1>
     <div class="role glow"><b class="ai flick">AI</b> <span>Marketer</span></div>
     <p class="what">I grow pages, cut scroll-stopping videos, and put AI to work.</p>
@@ -270,19 +475,38 @@
 <!-- 2. WHAT I DO -->
 <section class="services" id="services">
   <div class="pin">
-    <div class="head"><div class="prompt"><span class="spark"></span><span class="q" id="promptQ"></span><span class="send">↑</span></div><h2>What I do</h2><p>Tap a glowing button to see it in action.</p></div>
+    <div class="head"><div class="notifs" id="notifs" aria-live="polite"><div class="ntf" id="ntf"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="24" fill="#0B0B10" stroke="#3a3a46" stroke-width="3"/><circle cx="50" cy="50" r="30" fill="none" stroke="#f2f2f0" stroke-width="7"/><circle cx="50" cy="50" r="16" fill="#C6F432"/></svg><div class="nt"><b>Ravindhar Devaraj<small>now</small></b><p id="ntfMsg"></p></div></div></div><h2>What I do</h2><p>Tap a glowing button to see it in action.</p></div>
     <div class="infos">
       <div class="info ai" id="infoAI">
         <div class="tag">AI-Powered Marketing</div>
         <h3>AI-powered content &amp; automations</h3>
-        <p>AI films, AI influencers and product animations, plus automations that keep content, DMs and reporting running on their own.</p>
-        <ul><li>Veo</li><li>Kling</li><li>Nano Banana</li><li>n8n</li><li>Claude · ChatGPT</li></ul>
+        <p>AI films, AI influencers and product animations, plus automations that keep content, DMs and reporting running on their own. Tap a tool to see it at work.</p>
+        <ul class="chips">
+          <li><a class="chip go" href="playbook.html#ghost">Higgsfield<i>↗</i></a></li>
+          <li><a class="chip go" href="playbook.html#aaras">Seedance<i>↗</i></a></li>
+          <li><button class="chip flow" id="n8nBtn" aria-expanded="false">n8n<i>＋</i></button></li>
+          <li class="tipwrap"><button class="chip tipc">Claude</button><span class="tip"><b>Claude</b>My thinking partner for strategy: content calendars, research briefs, scripts and the logic behind my automations. A rough idea becomes a client-ready plan in minutes.</span></li>
+          <li class="tipwrap"><button class="chip tipc">ChatGPT</button><span class="tip"><b>ChatGPT</b>Fast first drafts: hooks, captions and ad copy in Tamil and English. Every brief starts from version two, never a blank page.</span></li>
+          <li><span class="chip plain">Nano Banana</span></li>
+        </ul>
+        <div class="flowcard" id="flowCard" hidden>
+          <div class="fc-head"><span class="n8n">n8n</span><b>Daily finance-news brief</b><small>Built for Finance with DSM · runs every morning</small></div>
+          <ol class="nodes">
+            <li><i>⏰</i><span><b>Morning trigger</b>Starts on its own, every day</span></li>
+            <li><i>📰</i><span><b>Collect</b>Pulls the day's trending finance news</span></li>
+            <li><i>🗂️</i><span><b>Categorise &amp; filter</b>Sorts updates, drops the noise</span></li>
+            <li><i>📈</i><span><b>Rank</b>Picks the stories most likely to perform today</span></li>
+            <li><i>✍️</i><span><b>Prepare</b>Two items, formatted for a talking-head Reel</span></li>
+            <li><i>💬</i><span><b>Deliver</b>Sent to the client's WhatsApp, ready to shoot</span></li>
+          </ol>
+          <p class="fc-foot">Research that used to take an hour is waiting on the client's phone before the day starts.</p>
+        </div>
       </div>
       <div class="info so" id="infoSO">
         <div class="tag">Social Media Marketing</div>
         <h3>Pages that grow and earn</h3>
-        <p>Strategy, content and growth for brands and creators, taking pages from a standing start to a steady monthly income.</p>
-        <ul><li>Instagram</li><li>Facebook</li><li>YouTube</li><li>Meta Ads</li></ul>
+        <p>Strategy, content and growth for brands and creators, taking pages from a standing start to a steady monthly income. Tap a platform to see the work.</p>
+        <ul class="chips"><li><button class="chip go" data-filter="meta">Meta · Instagram &amp; Facebook<i>↘</i></button></li><li><button class="chip go" data-filter="yt">YouTube<i>↘</i></button></li><li><button class="chip go" data-filter="ads">Meta Ads<i>↘</i></button></li></ul>
       </div>
     </div>
     <div class="cue2" id="cue2">Scroll<i></i></div>
@@ -296,6 +520,8 @@
     <div class="stats"><div><b>8+</b><span>years editing</span></div><div><b>3,000+</b><span>videos edited</span></div><div><b>50+</b><span>collaborations</span></div><div><b>15+</b><span>YouTube channels led</span></div><div><b>1</b><span>national news brand</span></div></div>
   </div>
   <p class="lede">Brand campaigns, Reels and long-form YouTube cut for attention: from Namma Yatri's Chennai launch ads to News7 Tamil and some of Tamil Nadu's biggest creators.</p>
+  <div class="car">
+  <button class="ar prev" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
   <div class="strip reel">
     <div data-href="edit.html#g0" class="tile h16"><video src="assets/lib/Ather_Nepal_06.mp4" poster="assets/lib/Ather_Nepal_06.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Ather Energy</b><span>Brand film</span></div></div>
     <div data-href="edit.html#g0" class="tile h9"><video src="assets/lib/NammaYatri_04_02.mp4" poster="assets/lib/NammaYatri_04_02.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Namma Yatri</b><span>Launch campaign</span></div></div>
@@ -304,6 +530,17 @@
     <div data-href="edit.html#g1" class="tile h16"><video src="assets/lib/Kuraishi_Singapore_02.mp4" poster="assets/lib/Kuraishi_Singapore_02.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Kuraishi · Singapore</b><span>Travel vlog</span></div></div>
     <div data-href="edit.html#g0" class="tile h9"><video src="assets/lib/AKS_Output05_01.mp4" poster="assets/lib/AKS_Output05_01.webp" muted loop playsinline preload="none"></video><div class="cap"><b>AKS</b><span>Candle launch</span></div></div>
     <div data-href="edit.html#g0" class="tile h9"><video src="assets/lib/NammaYatri_06_02.mp4" poster="assets/lib/NammaYatri_06_02.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Namma Yatri</b><span>Mascot spot</span></div></div>
+    <div data-href="edit.html#g1" class="tile h16"><video src="assets/lib/Pooja_Paris_04.mp4" poster="assets/lib/Pooja_Paris_04.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Pooja Venkat</b><span>France vlog</span></div></div>
+    <div data-href="edit.html#g2" class="tile h9"><video src="assets/lib/Party_Beatbox_DJ.mp4" poster="assets/lib/Party_Beatbox_DJ.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Beatbox × Luna</b><span>Event promo reel</span></div></div>
+    <div data-href="edit.html#g2" class="tile h9"><video src="assets/lib/MrGK_TalkingHead.mp4" poster="assets/lib/MrGK_TalkingHead.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Mr GK</b><span>Talking-head reel</span></div></div>
+    <div data-href="edit.html#g1" class="tile h16"><video src="assets/lib/UmaRiyaz_50thBirthday_01.mp4" poster="assets/lib/UmaRiyaz_50thBirthday_01.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Uma Riyaz</b><span>50th birthday film</span></div></div>
+    <div data-href="edit.html#g2" class="tile h9"><video src="assets/lib/MetaAds_SwingWorkshop.mp4" poster="assets/lib/MetaAds_SwingWorkshop.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Finance with DSM</b><span>Workshop ad</span></div></div>
+    <div data-href="edit.html#g2" class="tile h9"><video src="assets/lib/HFS_28_vayasula_04_01.mp4" poster="assets/lib/HFS_28_vayasula_04_01.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Her Finance Stories</b><span>Reel</span></div></div>
+    <div data-href="edit.html#g1" class="tile h16"><video src="assets/lib/Pranika_Photoshoot_06.mp4" poster="assets/lib/Pranika_Photoshoot_06.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Pranika</b><span>Photoshoot BTS</span></div></div>
+    <div data-href="edit.html#g2" class="tile h16"><video src="assets/lib/Maven_5CheapestCountries_04.mp4" poster="assets/lib/Maven_5CheapestCountries_04.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Maven</b><span>YouTube long-form</span></div></div>
+    <div data-href="edit.html#g1" class="tile h16"><video src="assets/lib/MakapaAnand_CSKvsMI_06.mp4" poster="assets/lib/MakapaAnand_CSKvsMI_06.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Ma Ka Pa Anand</b><span>CSK vs MI</span></div></div>
+  </div>
+  <button class="ar next" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
   </div>
   <div class="after">
     <div class="clients">Edited for <b>Namma Yatri</b><b>Ather</b><b>News7 Tamil</b><b>Uma Riyaz</b><b>Pranika</b><b>Ma Ka Pa Anand</b><b>Little Talks</b></div>
@@ -311,18 +548,24 @@
   </div>
 
   <div class="also" id="designs">
-    <div class="txt"><div class="eyebrow">Also</div><h3>Thumbnails &amp; posters</h3><p>Supporting design for the channels and pages I run: click-worthy YouTube thumbnails and campaign posters, in Tamil and English.</p>
-      <a class="wallbtn" href="design.html"><span class="mini"><i></i><i></i><i></i><i></i><i></i><i></i></span><span><small>23 designs</small>Open the Design Wall</span><span class="arr">→</span></a></div>
+    <div class="txt"><div class="eyebrow">Also</div><h3>Thumbnails &amp; posters</h3><p>Supporting design for the channels and pages I run: click-worthy YouTube thumbnails, nightlife event posters and campaign creatives, in Tamil and English.</p>
+      <a class="wallbtn" href="design.html"><span class="mini"><i></i><i></i><i></i><i></i><i></i><i></i></span><span><small>33 designs</small>Open the Design Wall</span><span class="arr">→</span></a></div>
+    <div class="car">
+    <button class="ar prev" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
     <div class="strip thumbs">
-      <div data-href="design.html" class="tile h16"><img src="assets/lib/BookShow_News7_thumbnails_07.webp" alt=""></div>
-      <div data-href="design.html" class="tile h9"><img src="assets/lib/DSM_thumbnails_05.webp" alt=""></div>
-      <div data-href="design.html" class="tile h16"><img src="assets/lib/Maven_thumbnails_01.webp" alt=""></div>
-      <div data-href="design.html" class="tile h11"><img src="assets/lib/DSM_posters_03.webp" alt=""></div>
-      <div data-href="design.html" class="tile h16"><img src="assets/lib/BookShow_News7_thumbnails_09.webp" alt=""></div>
-      <div data-href="design.html" class="tile h9"><img src="assets/lib/DSM_thumbnails_09.webp" alt=""></div>
-      <div data-href="design.html" class="tile h16"><img src="assets/lib/BookShow_News7_thumbnails_06.webp" alt=""></div>
-      <div data-href="design.html" class="tile h23"><img src="assets/lib/DSM_posters_06.webp" alt=""></div>
-      <div data-href="design.html" class="tile h16"><img src="assets/lib/Maven_thumbnails_09.webp" alt=""></div>
+      <div data-href="design.html" class="tile h16"><img src="assets/lib/Maven_thumbnails_01.webp" alt="" loading="lazy"></div>
+      <div data-href="design.html" class="tile h16"><img src="assets/lib/Maven_thumbnails_09.webp" alt="" loading="lazy"></div>
+      <div data-href="design.html" class="tile h16"><img src="assets/lib/Maven_thumbnails_13.webp" alt="" loading="lazy"></div>
+      <div data-href="design.html" class="tile h11"><img src="assets/lib/Party_SaturdayStories.webp" alt="" loading="lazy"></div>
+      <div data-href="design.html" class="tile h45"><img src="assets/lib/Party_HighHeels.webp" alt="" loading="lazy"></div>
+      <div data-href="design.html" class="tile h11"><img src="assets/lib/Party_QueensNight.webp" alt="" loading="lazy"></div>
+      <div data-href="design.html" class="tile h45"><img src="assets/lib/Party_Sakthi.webp" alt="" loading="lazy"></div>
+      <div data-href="design.html" class="tile h9"><img src="assets/lib/DSM_thumbnails_05.webp" alt="" loading="lazy"></div>
+      <div data-href="design.html" class="tile h11"><img src="assets/lib/DSM_posters_03.webp" alt="" loading="lazy"></div>
+      <div data-href="design.html" class="tile h16"><img src="assets/lib/BookShow_News7_thumbnails_09.webp" alt="" loading="lazy"></div>
+      <div data-href="design.html" class="tile h16"><img src="assets/lib/BookShow_News7_thumbnails_02.webp" alt="" loading="lazy"></div>
+      </div>
+    <button class="ar next" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
     </div>
   </div>
 </section>
@@ -331,23 +574,38 @@
 <section class="work" id="work">
   <div class="eyebrow">Selected work</div>
   <h2>Highlights</h2>
-  <p class="sub">Beyond the edit: influencer campaigns, AI content, social media growth and management, and brand campaigns. Selection to be finalised.</p>
-  <div class="grid">
-    <div class="tile w2" data-href="edit.html#g0"><span class="k b">Brand campaign</span><video src="assets/lib/Ather_Nepal_06.mp4" poster="assets/lib/Ather_Nepal_06.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Ather Energy</b><span>Nepal launch film</span></div></div>
-    <div class="tile w2" data-href="playbook.html#g4"><span class="k b">Brand campaign</span><video src="assets/lib/Aaras_01_01.mp4" poster="assets/lib/Aaras_01_01.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Aara's Chicken</b><span>Digital &amp; AI marketing</span></div></div>
-    <div class="tile w2" data-href="playbook.html#g3"><span class="k s">Social management</span><video src="assets/lib/Maven_PreDepartureMasterclass_02.mp4" poster="assets/lib/Maven_PreDepartureMasterclass_02.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Maven</b><span>YouTube channel</span></div></div>
-    <div class="tile" data-href="playbook.html#g4"><span class="k b">Brand campaign</span><video src="assets/lib/NammaYatri_01_02.mp4" poster="assets/lib/NammaYatri_01_02.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Namma Yatri</b><span>Chennai launch</span></div></div>
-    <div class="tile" data-href="playbook.html#g0"><span class="k i">Creator campaign</span><video src="assets/lib/Creator_PromoReel_03.mp4" poster="assets/lib/Creator_PromoReel_03.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Creator campaigns</b><span>Course-launch campaign</span></div></div>
-    <div class="tile" data-href="playbook.html#g0"><span class="k i">Influencer</span><video src="assets/lib/Creator_Anitha_01.mp4" poster="assets/lib/Creator_Anitha_01.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Influencer marketing</b><span>Creator collaborations</span></div></div>
-    <div class="tile" data-href="playbook.html#g3"><span class="k s">Social management</span><video src="assets/lib/DSM_StockMarketAd_02.mp4" poster="assets/lib/DSM_StockMarketAd_02.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Finance with DSM</b><span>Reels &amp; Meta ads</span></div></div>
-    <div class="tile" data-href="playbook.html#g2"><span class="k s">Social growth</span><video src="assets/lib/Bakthi_03_02.mp4" poster="assets/lib/Bakthi_03_02.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Bakthi Infinity</b><span>250K to 847.7K followers</span></div></div>
-    <div class="tile" data-href="playbook.html#g1"><span class="k a">AI film</span><video src="assets/lib/AI_F1_05.mp4" poster="assets/lib/AI_F1_05.webp" muted loop playsinline preload="none"></video><div class="cap"><b>F1</b><span>AI-generated film</span></div></div>
+  <p class="sub">Brand campaigns, social media growth, Meta Ads, YouTube and AI content. Pick a platform or swipe through everything.</p>
+  <div class="hl-bar"><div class="filters" id="hlFilters"><button class="on" data-f="all">All work</button><button data-f="meta">Meta · Instagram &amp; Facebook</button><button data-f="yt">YouTube</button><button data-f="ads">Meta Ads</button><button data-f="ai">AI</button><button data-f="brand">Brand campaigns</button></div></div>
+  <div class="car hlcar">
+  <button class="ar prev" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <div class="strip hl" id="hlStrip">
+    <div class="tile w2" data-cat="brand yt" data-href="edit.html#g0"><span class="k b">Brand campaign</span><video src="assets/lib/Ather_Nepal_06.mp4" poster="assets/lib/Ather_Nepal_06.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Ather Energy</b><span>Nepal launch film</span><a class="watch" href="https://youtu.be/NMX1b5D93qw" target="_blank" rel="noopener">▶ Watch</a></div></div>
+    <div class="tile w2" data-cat="brand ai meta" data-href="playbook.html#aaras"><span class="k b">Brand campaign</span><video src="assets/lib/Aaras_01_01.mp4" poster="assets/lib/Aaras_01_01.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Aara's Chicken</b><span>Digital &amp; AI marketing</span></div></div>
+    <div class="tile w2" data-cat="yt" data-href="playbook.html#g3"><span class="k s">YouTube</span><video src="assets/lib/Maven_PreDepartureMasterclass_02.mp4" poster="assets/lib/Maven_PreDepartureMasterclass_02.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Maven</b><span>YouTube channel</span></div></div>
+    <div class="tile" data-cat="brand meta" data-href="playbook.html#g4"><span class="k b">Brand campaign</span><video src="assets/lib/NammaYatri_01_02.mp4" poster="assets/lib/NammaYatri_01_02.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Namma Yatri</b><span>Chennai launch</span></div></div>
+    <div class="tile" data-cat="meta" data-href="playbook.html#g0"><span class="k i">Creator campaign</span><video src="assets/lib/Creator_PromoReel_03.mp4" poster="assets/lib/Creator_PromoReel_03.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Creator campaigns</b><span>Course-launch campaign</span></div></div>
+    <div class="tile" data-cat="meta" data-href="playbook.html#g0"><span class="k i">Influencer</span><video src="assets/lib/Creator_Anitha_01.mp4" poster="assets/lib/Creator_Anitha_01.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Influencer marketing</b><span>Creator collaborations</span></div></div>
+    <div class="tile" data-cat="meta brand" data-href="edit.html#g2"><span class="k b">Event promo</span><video src="assets/lib/Party_Beatbox_DJ.mp4" poster="assets/lib/Party_Beatbox_DJ.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Beatbox × Luna</b><span>Nightlife event reels</span></div></div>
+    <div class="tile" data-cat="meta" data-href="playbook.html#g3"><span class="k s">Instagram</span><video src="assets/lib/DSM_StockMarketAd_02.mp4" poster="assets/lib/DSM_StockMarketAd_02.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Finance with DSM</b><span>Reels that grew to 86K</span></div></div>
+    <div class="tile" data-cat="ads" data-href="playbook.html#g3"><span class="k m">Meta Ads</span><video src="assets/lib/MetaAds_SwingWorkshop.mp4" poster="assets/lib/MetaAds_SwingWorkshop.webp" muted loop playsinline preload="none"></video><div class="cap"><b>DSM · Meta Ads</b><span>Workshop ad, After Effects</span></div></div>
+    <div class="tile only" data-cat="ads" data-href="playbook.html#g3"><span class="k m">Meta Ads</span><video src="assets/lib/MetaAds_StockMarket.mp4" poster="assets/lib/MetaAds_StockMarket.webp" muted loop playsinline preload="none"></video><div class="cap"><b>DSM · Meta Ads</b><span>Webinar ad, After Effects</span></div></div>
+    <div class="tile only" data-cat="ads" data-href="playbook.html#g3"><span class="k m">Meta Ads</span><video src="assets/lib/MetaAds_TrendStrategy.mp4" poster="assets/lib/MetaAds_TrendStrategy.webp" muted loop playsinline preload="none"></video><div class="cap"><b>DSM · Meta Ads</b><span>Trading-workshop ad</span></div></div>
+    <div class="tile only" data-cat="ads" data-href="playbook.html#g3"><span class="k m">Meta Ads</span><video src="assets/lib/MetaAds_OptionsWebinar.mp4" poster="assets/lib/MetaAds_OptionsWebinar.webp" muted loop playsinline preload="none"></video><div class="cap"><b>DSM · Meta Ads</b><span>Options webinar ad</span></div></div>
+    <div class="tile only" data-cat="ads" data-href="playbook.html#g3"><span class="k m">Meta Ads</span><video src="assets/lib/MetaAds_EntryExit.mp4" poster="assets/lib/MetaAds_EntryExit.webp" muted loop playsinline preload="none"></video><div class="cap"><b>DSM · Meta Ads</b><span>Swing-trading webinar ad</span></div></div>
+    <div class="tile w2 only" data-cat="yt" data-href="edit.html#g2"><span class="k s">YouTube</span><video src="assets/lib/Maven_5CheapestCountries_04.mp4" poster="assets/lib/Maven_5CheapestCountries_04.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Maven</b><span>Long-form explainer</span><a class="watch" href="https://youtu.be/HZRn5l1XCSE" target="_blank" rel="noopener">▶ Watch</a></div></div>
+    <div class="tile w2 only" data-cat="yt" data-href="edit.html#g2"><span class="k s">YouTube</span><video src="assets/lib/Maven_TheTruthAbout_01.mp4" poster="assets/lib/Maven_TheTruthAbout_01.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Maven</b><span>The Truth About Student Housing</span><a class="watch" href="https://youtu.be/XIIrNHmyUQw" target="_blank" rel="noopener">▶ Watch</a></div></div>
+    <div class="tile w2 only" data-cat="yt" data-href="edit.html#g1"><span class="k s">YouTube</span><video src="assets/lib/Kuraishi_Singapore_02.mp4" poster="assets/lib/Kuraishi_Singapore_02.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Kuraishi Vibes</b><span>Singapore food vlog</span><a class="watch" href="https://youtu.be/dDFyzPpc_kY" target="_blank" rel="noopener">▶ Watch</a></div></div>
+    <div class="tile" data-cat="meta" data-href="playbook.html#g2"><span class="k s">Social growth</span><video src="assets/lib/Bakthi_03_02.mp4" poster="assets/lib/Bakthi_03_02.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Bakthi Infinity</b><span>250K to 847.7K followers</span></div></div>
+    <div class="tile w2 only" data-cat="ai" data-href="playbook.html#ghost"><span class="k a">AI film</span><video src="assets/lib/AI_Ghost_01.mp4" poster="assets/lib/AI_Ghost_01.webp" muted loop playsinline preload="none"></video><div class="cap"><b>Ghost</b><span>AI short film · Higgsfield</span></div></div>
+    <div class="tile" data-cat="ai" data-href="playbook.html#g1"><span class="k a">AI film</span><video src="assets/lib/AI_F1_05.mp4" poster="assets/lib/AI_F1_05.webp" muted loop playsinline preload="none"></video><div class="cap"><b>F1</b><span>AI-generated film</span></div></div>
+  </div>
+  <button class="ar next" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
   </div>
   <a class="playbook" href="playbook.html">
     <div><div class="k1">5 chapters · everything beyond the edit</div><div class="t1">Open <em>the Playbook</em></div>
       <div class="t2">Influencer campaigns (incl. Tata Punch), AI content, social media growth and management, brand campaigns, with the results behind them.</div>
       <span class="t3">Open the Playbook →</span></div>
-    <div class="deck"><div class="c"><small>01</small>Influencer marketing</div><div class="c"><small>02</small>AI marketing</div><div class="c"><small>03</small>Social media growth</div><div class="c"><small>04</small>Social media management</div><div class="c"><small>05</small>Brand campaigns</div></div>
+    <div class="deck"><div class="c c1"><svg class="ci" viewBox="0 0 24 24"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1z"/><path d="M15 9a4 4 0 0 1 0 6M18 6a8 8 0 0 1 0 12"/></svg><small>01</small>Influencer marketing<i class="deco"></i></div><div class="c c2"><svg class="ci" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg><small>02</small>AI marketing<i class="deco"></i></div><div class="c c3"><svg class="ci" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><small>03</small>Social media growth<i class="deco"></i></div><div class="c c4"><svg class="ci" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4M8 14h2M14 14h2M8 17h2"/></svg><small>04</small>Social media management<i class="deco"></i></div><div class="c c5"><svg class="ci" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg><small>05</small>Brand campaigns<i class="deco"></i></div></div>
   </a>
 </section>
 
@@ -358,7 +616,7 @@
       <div class="eyebrow">About</div>
       <h2>Behind the <span>edit</span></h2>
     </div>
-    <p class="bio">I started behind the camera as a cameraman and video editor, and grew into running digital for one of Tamil Nadu's leading news channels. Along the way I've led 15+ YouTube channels, produced for some of the state's best-known creators and edited 3,000+ videos. Today I co-run <b>The Three Amigos</b>, where social media, video and AI come together to help brands grow.</p>
+    <p class="bio">Your audience gives you about three seconds. I've spent 8+ years and 3,000+ edits learning what to do with them.<br><br>I started behind the camera, moved to the edit desk, and ended up running digital for <b>News 7 Tamil</b>, where "we'll post it tomorrow" isn't a sentence anyone says. I've led 15+ YouTube channels and helped pages go from "who?" to "how?!"<br><br>Today, I put video, social media and AI to work so your brand earns those three seconds, and the next thirty.</p>
   </div>
   <div class="chapters">
     <div class="ch"><small>01</small><b>Behind the camera</b><span>Cameraman and video editor; three years running a YouTube channel</span></div>
@@ -369,20 +627,9 @@
     <div class="ch now"><small>Now</small><b>Co-founder · The Three Amigos</b><span>AI marketing, social media and video for brands across India</span></div>
   </div>
   <div class="prints-wrap">
-    <div class="prints-head"><h3>Through my lens</h3><p>Portraits I've shot and moments from set. I also shot the short film <i>Maiyal</i> as cinematographer.</p></div>
+    <div class="prints-head"><h3>Through my lens</h3><p>Portraits I've shot, then the work behind them: behind the scenes and on set. I also shot the short film <i>Maiyal</i> as cinematographer.</p></div>
     <div class="line"></div>
-    <div class="prints">
-      <figure style="--r:-4deg"><img src="assets/lib/Photography_01.webp" alt="Portrait photograph" loading="lazy"><figcaption>Portrait</figcaption></figure>
-      <figure style="--r:3deg"><img src="assets/lib/BTS_BTS_01.webp" alt="On set" loading="lazy"><figcaption>On set</figcaption></figure>
-      <figure style="--r:-2deg"><img src="assets/lib/Photography_07.webp" alt="Portrait photograph" loading="lazy"><figcaption>Portrait</figcaption></figure>
-      <figure style="--r:4deg"><img src="assets/lib/Photography_14.webp" alt="Portrait photograph" loading="lazy"><figcaption>Portrait</figcaption></figure>
-      <figure style="--r:-3deg"><img src="assets/lib/BTS_VID_20200308_132135_01.webp" alt="Behind the scenes" loading="lazy"><figcaption>Behind the scenes</figcaption></figure>
-      <figure style="--r:2deg"><img src="assets/lib/Photography_04.webp" alt="Portrait photograph" loading="lazy"><figcaption>Event portrait</figcaption></figure>
-      <figure style="--r:-4deg"><img src="assets/lib/BTS_BTS_03.webp" alt="On set" loading="lazy"><figcaption>On set</figcaption></figure>
-      <figure style="--r:3deg"><img src="assets/lib/Photography_17.webp" alt="Portrait photograph" loading="lazy"><figcaption>Portrait</figcaption></figure>
-      <figure style="--r:-2deg"><img src="assets/lib/BTS_StorySaver_iamsakshi_02.webp" alt="Shoot mode" loading="lazy"><figcaption>Shoot mode</figcaption></figure>
-      <figure style="--r:3deg"><img src="assets/lib/Photography_12.webp" alt="Portrait photograph" loading="lazy"><figcaption>Portrait</figcaption></figure>
-    </div>
+    <div class="lens"><div class="lens-track"><div class="grp pt"><div class="ctag"><span>Portraits</span><small>7 frames</small></div><figure style="--r:-4deg"><img src="assets/lib/Portrait_01.webp" alt="Portrait" loading="lazy"><figcaption>Portrait</figcaption></figure><figure style="--r:3deg"><img src="assets/lib/Portrait_03.webp" alt="Portrait" loading="lazy"><figcaption>Portrait</figcaption></figure><figure style="--r:-2deg"><img src="assets/lib/Portrait_05.webp" alt="Portrait" loading="lazy"><figcaption>Portrait</figcaption></figure><figure style="--r:4deg"><img src="assets/lib/Portrait_06.webp" alt="Portrait" loading="lazy"><figcaption>Portrait</figcaption></figure><figure style="--r:-3deg"><img src="assets/lib/Portrait_07.webp" alt="Portrait" loading="lazy"><figcaption>Portrait</figcaption></figure><figure style="--r:2deg"><img src="assets/lib/Portrait_09.webp" alt="Portrait" loading="lazy"><figcaption>Portrait</figcaption></figure><figure style="--r:-4deg"><img src="assets/lib/Portrait_10.webp" alt="Portrait" loading="lazy"><figcaption>Portrait</figcaption></figure></div><div class="grp bt"><div class="ctag"><span>Behind the scenes</span><small>3 frames</small></div><figure style="--r:-4deg"><img src="assets/lib/BTS_01.webp" alt="Behind the scenes" loading="lazy"><figcaption>Behind the scenes</figcaption></figure><figure style="--r:3deg"><img src="assets/lib/BTS_03.webp" alt="Behind the scenes" loading="lazy"><figcaption>Behind the scenes</figcaption></figure><figure style="--r:-2deg"><img src="assets/lib/BTS_04.webp" alt="Behind the scenes" loading="lazy"><figcaption>Behind the scenes</figcaption></figure></div><div class="grp os"><div class="ctag"><span>On set</span><small>3 frames</small></div><figure style="--r:-4deg"><img src="assets/lib/OnSet_01.webp" alt="On set" loading="lazy"><figcaption>On set</figcaption></figure><figure style="--r:3deg"><img src="assets/lib/OnSet_03.webp" alt="On set" loading="lazy"><figcaption>On set</figcaption></figure><figure style="--r:-2deg"><img src="assets/lib/OnSet_04.webp" alt="On set" loading="lazy"><figcaption>On set</figcaption></figure></div><div class="dup" aria-hidden="true"><div class="grp pt"><div class="ctag"><span>Portraits</span><small>7 frames</small></div><figure style="--r:-4deg"><img src="assets/lib/Portrait_01.webp" alt="" loading="lazy"><figcaption>Portrait</figcaption></figure><figure style="--r:3deg"><img src="assets/lib/Portrait_03.webp" alt="" loading="lazy"><figcaption>Portrait</figcaption></figure><figure style="--r:-2deg"><img src="assets/lib/Portrait_05.webp" alt="" loading="lazy"><figcaption>Portrait</figcaption></figure><figure style="--r:4deg"><img src="assets/lib/Portrait_06.webp" alt="" loading="lazy"><figcaption>Portrait</figcaption></figure><figure style="--r:-3deg"><img src="assets/lib/Portrait_07.webp" alt="" loading="lazy"><figcaption>Portrait</figcaption></figure><figure style="--r:2deg"><img src="assets/lib/Portrait_09.webp" alt="" loading="lazy"><figcaption>Portrait</figcaption></figure><figure style="--r:-4deg"><img src="assets/lib/Portrait_10.webp" alt="" loading="lazy"><figcaption>Portrait</figcaption></figure></div><div class="grp bt"><div class="ctag"><span>Behind the scenes</span><small>3 frames</small></div><figure style="--r:-4deg"><img src="assets/lib/BTS_01.webp" alt="" loading="lazy"><figcaption>Behind the scenes</figcaption></figure><figure style="--r:3deg"><img src="assets/lib/BTS_03.webp" alt="" loading="lazy"><figcaption>Behind the scenes</figcaption></figure><figure style="--r:-2deg"><img src="assets/lib/BTS_04.webp" alt="" loading="lazy"><figcaption>Behind the scenes</figcaption></figure></div><div class="grp os"><div class="ctag"><span>On set</span><small>3 frames</small></div><figure style="--r:-4deg"><img src="assets/lib/OnSet_01.webp" alt="" loading="lazy"><figcaption>On set</figcaption></figure><figure style="--r:3deg"><img src="assets/lib/OnSet_03.webp" alt="" loading="lazy"><figcaption>On set</figcaption></figure><figure style="--r:-2deg"><img src="assets/lib/OnSet_04.webp" alt="" loading="lazy"><figcaption>On set</figcaption></figure></div></div></div>
   </div>
 </section>
 
@@ -397,9 +644,66 @@
       <a href="https://www.linkedin.com/in/ravindhardevaraj/" target="_blank" rel="noopener">LinkedIn <span>/ravindhardevaraj</span></a>
       <a href="https://www.instagram.com/raveendh_/" target="_blank" rel="noopener">Instagram <span>@raveendh_</span></a>
     </div>
+    <button class="briefbtn" id="openBrief" type="button">
+      <span class="clap"><i></i><i></i><i></i><i></i></span>
+      <span class="bt"><small>Scene 01 · Take 01</small>Start a project brief</span>
+      <span class="bm">60 sec · lands on my WhatsApp</span>
+    </button>
+    <a class="tta" href="https://www.threeamigosdm.com/" target="_blank" rel="noopener" id="ttaLink">
+      <span class="tta-k">From the family of The Three Amigos</span>
+      <span class="tta-h">When one navigator is not enough, meet all three.</span>
+      <span class="tta-l"><span class="dots"><i></i><i></i><i></i></span>Visit The Three Amigos <b>↗</b></span>
+    </a>
   </div>
 </section>
 
+
+<div class="brief" id="brief" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="briefTitle">
+    <div class="b-top">
+      <div><small class="b-scene" id="bScene">Scene 1 of 3</small><h3 id="briefTitle">Let's plan your next move</h3></div>
+      <button class="b-x" id="closeBrief" aria-label="Close">✕</button>
+    </div>
+    <div class="tl"><div class="tl-clips"><span>What</span><span>When</span><span>You</span></div><div class="ph" id="bPh"><i></i></div></div>
+    <div class="b-main">
+      <form id="briefForm" onsubmit="return false">
+        <section class="st on" data-s="0">
+          <h4>What are we making?</h4><p class="hint">Pick everything that applies.</p>
+          <div class="opts multi" data-k="svc">
+            <button type="button" data-v="Social media management"><i>📱</i>Social media management</button>
+            <button type="button" data-v="Video editing"><i>🎬</i>Video editing</button>
+            <button type="button" data-v="AI marketing / AI video"><i>✨</i>AI marketing &amp; AI video</button>
+            <button type="button" data-v="Meta Ads"><i>🎯</i>Meta Ads</button>
+            <button type="button" data-v="Influencer campaign"><i>📣</i>Influencer campaign</button>
+            <button type="button" data-v="Automation (n8n)"><i>⚙️</i>Automation</button>
+          </div>
+        </section>
+        <section class="st" data-s="1">
+          <h4>When do you want to start?</h4><p class="hint">So I can plan the edit bay.</p>
+          <div class="opts one" data-k="time">
+            <button type="button" data-v="ASAP">ASAP</button><button type="button" data-v="This month">This month</button><button type="button" data-v="In 1–3 months">In 1–3 months</button><button type="button" data-v="Just exploring">Just exploring</button>
+          </div>
+        </section>
+        <section class="st" data-s="2">
+          <h4>Who's calling action?</h4>
+          <div class="fields">
+            <label><span>Your name</span><input id="fName" autocomplete="name" placeholder="Priya"></label>
+            <label><span>Brand / company</span><input id="fBrand" autocomplete="organization" placeholder="Brew &amp; Co."></label>
+            <label class="full"><span>One line about the project</span><input id="fAbout" placeholder="Launching our first café in Coimbatore"></label>
+          </div>
+        </section>
+      </form>
+      <aside class="preview"><small>Your message</small><div class="bubble" id="bPrev"></div><span class="ticks">✓✓</span></aside>
+    </div>
+    <div class="b-foot">
+      <button class="b-back" id="bBack" type="button">← Back</button>
+      <span class="b-err" id="bErr"></span>
+      <button class="b-next" id="bNext" type="button">Next →</button>
+      <button class="b-send" id="bSend" type="button" hidden><svg viewBox="0 0 24 24"><path d="M3 21l1.6-4.8A8.5 8.5 0 1 1 8 19.6z"/></svg>Send on WhatsApp</button>
+      <a class="b-mail" id="bMail" href="#" hidden>or email it</a>
+    </div>
+  </div>
+</div>
 <script>
 (()=>{
   const $=id=>document.getElementById(id);
@@ -465,7 +769,7 @@
 
   /* ---------- placement ---------- */
   const W=()=>innerWidth, H=()=>innerHeight, AR=1152/720;
-  const orbEl=$('dockOrb');
+  const orbEl=$('dockOrb'); let hinted=false;
   const orbC=()=>{ const r=orbEl.getBoundingClientRect(); return {x:r.left+r.width/2, y:r.top+r.height/2} };
   const states={
     what:   ()=> mobile()? {x:-W()*0.1,w:W()*1.2,cy:H()*0.36,op:1} : {x:W()*0.225,w:W()*0.55,cy:H()*0.57,op:1},
@@ -498,7 +802,7 @@
     if(na==='orb'&&nb==='orb') orbOn=true;
     if(na==='what'&&nb==='orb'&&t>0.55) { orbOn=true; grow=0.6+0.4*Math.min(1,(t-0.55)/0.35); }
     if(na==='orb'&&nb==='contact'){ orbOn=t<0.6; grow=1+t*5; oo=Math.max(0,1-t/0.6); }
-    orbEl.classList.toggle('live',orbOn); orbEl.style.transform=`scale(${grow})`; orbEl.style.opacity=orbOn?oo:0;
+    orbEl.classList.toggle('live',orbOn); if(orbOn&&!hinted){hinted=true;orbEl.classList.add('hint');setTimeout(()=>orbEl.classList.remove('hint'),3400)} orbEl.style.transform=`scale(${grow})`; orbEl.style.opacity=orbOn?oo:0;
     const r=stage.getBoundingClientRect();
     orbs.ai.style.left=(r.left+r.width*0.195)+'px'; orbs.ai.style.top=(r.top+r.height*0.40)+'px';
     orbs.so.style.left=(r.left+r.width*0.835)+'px'; orbs.so.style.top=(r.top+r.height*0.92)+'px';
@@ -529,7 +833,7 @@
   addEventListener('scroll',onScroll,{passive:true});
 
   // strips: drag to scroll
-  document.querySelectorAll('.strip,.prints').forEach(st=>{
+  document.querySelectorAll('.strip').forEach(st=>{
     let down=false,sx=0,sl=0,moved=false;
     st.addEventListener('pointerdown',e=>{down=true;moved=false;sx=e.clientX;sl=st.scrollLeft});
     addEventListener('pointerup',()=>{down=false});
@@ -538,15 +842,86 @@
   const io=new IntersectionObserver(es=>es.forEach(en=>{const v=en.target;en.isIntersecting?v.play().catch(()=>{}):v.pause()}),{threshold:.3});
   document.querySelectorAll('.tile video').forEach(v=>io.observe(v));
   // the prompt types itself when the section arrives
-  const Q='Welcome in. So, what does Ravindhar do?', qEl=$('promptQ'); let typed=false;
-  function typeQ(){ if(typed) return; typed=true; let i=0; (function t(){ qEl.textContent=Q.slice(0,++i); if(i<Q.length) setTimeout(t,38+Math.random()*40) })() }
-  addEventListener('scroll',()=>{ if(scrollY>$('services').offsetTop-H()*0.4) typeQ() },{passive:true});
+  // rotating notifications above "What I do"
+  const NT=[['New post','Here\'s what I do 👇'],['New Reel','AI-driven growth, media &amp; more 🎬'],['New Story','A creative look at what I do ✨'],
+    ['Meta Ads','Campaign live. The leads are rolling in 📈'],['YouTube','15+ channels led. Your upload could be next ▶'],['Automation','The morning content brief just landed ✅'],['New edit','3,000+ cuts and still counting ✂️']];
+  const ntf=$('ntf'), ntm=$('ntfMsg'); let ni=0, nOn=false;
+  function showN(){ const [k,m]=NT[ni++%NT.length]; ntm.innerHTML='<b>'+k+'</b> · '+m; ntf.classList.remove('out'); ntf.classList.remove('in'); void ntf.offsetWidth; ntf.classList.add('in');
+    setTimeout(()=>{ ntf.classList.remove('in'); ntf.classList.add('out') },3000) }
+  addEventListener('scroll',()=>{ if(!nOn && scrollY>$('services').offsetTop-H()*0.4){ nOn=true; showN(); setInterval(showN,3600) } },{passive:true});
   // tiles open the matching dedicated page (but not while dragging a strip)
   document.querySelectorAll('[data-href]').forEach(t=>{ t.style.cursor='pointer'; let sx=0;
-    t.addEventListener('pointerdown',e=>sx=e.clientX); t.addEventListener('click',e=>{ if(Math.abs(e.clientX-sx)<6) location.href=t.dataset.href }) });
+    t.addEventListener('pointerdown',e=>sx=e.clientX); t.addEventListener('click',e=>{ if(e.target.closest('a')) return; if(Math.abs(e.clientX-sx)<6) location.href=t.dataset.href }) });
   // coming back from a dedicated page: land on the section you left, instantly
   if(location.hash){ const el=document.querySelector(location.hash); if(el){ document.documentElement.style.scrollBehavior='auto';
     requestAnimationFrame(()=>{ scrollTo(0,el.getBoundingClientRect().top+scrollY-(location.hash==='#designs'?120:0)); document.documentElement.style.scrollBehavior=''; onScroll(); }) } }
+
+  /* ---------- carousels: arrows slide the strip ---------- */
+  const cars=[...document.querySelectorAll('.car')].map(car=>{
+    const st=car.querySelector('.strip'), pv=car.querySelector('.ar.prev'), nx=car.querySelector('.ar.next');
+    const step=()=>Math.max(280, st.clientWidth*0.82);
+    const glide=dir=>{ const from=st.scrollLeft, to=Math.max(0,Math.min(st.scrollWidth-st.clientWidth, from+dir*step())), t0=performance.now(), D=650;
+      (function f(t){ const k=Math.min(1,(t-t0)/D), e=1-Math.pow(1-k,3); st.scrollLeft=from+(to-from)*e; if(k<1) requestAnimationFrame(f); else upd(); })(t0) };
+    const upd=()=>{ pv.classList.toggle('off',st.scrollLeft<6); nx.classList.toggle('off',st.scrollLeft+st.clientWidth>=st.scrollWidth-6) };
+    pv.addEventListener('click',()=>glide(-1)); nx.addEventListener('click',()=>glide(1));
+    st.addEventListener('scroll',upd,{passive:true}); addEventListener('resize',upd); setTimeout(upd,300);
+    return {st,upd};
+  });
+  /* ---------- highlights filters ---------- */
+  const hl=$('hlStrip'), hlTiles=[...hl.querySelectorAll('.tile')], fBtns=[...document.querySelectorAll('#hlFilters button')];
+  function setFilter(f){
+    fBtns.forEach(b=>b.classList.toggle('on',b.dataset.f===f));
+    hlTiles.forEach(t=>{ const cats=t.dataset.cat.split(' '); t.hidden = f==='all' ? t.classList.contains('only') : !cats.includes(f) });
+    hl.scrollLeft=0; hl.classList.remove('swap'); void hl.offsetWidth; hl.classList.add('swap');
+    cars.forEach(c=>c.upd());
+  }
+  fBtns.forEach(b=>b.addEventListener('click',()=>setFilter(b.dataset.f)));
+  setFilter('all');
+  // "What I do" platform chips jump to the matching highlights
+  document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{ setFilter(b.dataset.filter); $('work').scrollIntoView({behavior:'smooth'}) }));
+  // n8n workflow card + Claude / ChatGPT tips
+  const n8n=$('n8nBtn'), fc=$('flowCard');
+  n8n.addEventListener('click',e=>{ e.stopPropagation(); const open=fc.hidden; fc.hidden=!open; document.body.classList.toggle('fc-open',open); n8n.classList.toggle('on',open); n8n.setAttribute('aria-expanded',open) });
+  document.addEventListener('click',e=>{ if(!fc.hidden && !e.target.closest('#flowCard')){ fc.hidden=true; document.body.classList.remove('fc-open'); n8n.classList.remove('on') } });
+  document.querySelectorAll('.tipwrap').forEach(w=>{ w.querySelector('button').addEventListener('click',()=>w.classList.toggle('open')); w.addEventListener('mouseleave',()=>w.classList.remove('open')) });
+  /* ---------- project brief ---------- */
+  const B=$('brief'), steps=[...B.querySelectorAll('.st')], clipsTl=[...B.querySelectorAll('.tl-clips span')], names=['What','When','You'];
+  const sel={svc:[],time:''}; let step=0, lastFocus=null;
+  B.querySelectorAll('.opts').forEach(g=>g.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{
+    const k=g.dataset.k;
+    if(g.classList.contains('multi')){ b.classList.toggle('sel'); sel[k]=[...g.querySelectorAll('.sel')].map(x=>x.dataset.v) }
+    else { g.querySelectorAll('button').forEach(x=>x.classList.toggle('sel',x===b)); sel[k]=b.dataset.v; setTimeout(()=>{ if(step<2) go(step+1) },260) }
+    render();
+  })));
+  ['fName','fBrand','fAbout'].forEach(id=>$(id).addEventListener('input',render));
+  function msg(){
+    const n=$('fName').value.trim(), br=$('fBrand').value.trim(), ab=$('fAbout').value.trim();
+    let m=`Hi Ravindhar! I'm ${n||'…'}${br?` from ${br}`:''}`; if(!/[.!?]$/.test(m)) m+='.';
+    m+=`\n\nLooking for: ${sel.svc.length?sel.svc.join(', '):'…'}`;
+    m+=`\nStart: ${sel.time||'…'}`;
+    if(ab) m+=`\n\nThe project: ${ab}`;
+    return m;
+  }
+  function render(){ $('bPrev').textContent=msg(); $('bErr').textContent='' }
+  function go(i){
+    step=i; steps.forEach((st,k)=>st.classList.toggle('on',k===i));
+    clipsTl.forEach((c,k)=>c.classList.toggle('done',k<=i));
+    $('bPh').style.left=`calc(${(i+1)*100/3}% - ${i===2?8:2}px)`;
+    $('bScene').textContent=`Scene ${i+1} of 3 · ${names[i]}`;
+    $('bBack').disabled=i===0; $('bNext').hidden=i===2; $('bSend').hidden=i!==2; $('bMail').hidden=i!==2;
+    render();
+  }
+  $('bNext').addEventListener('click',()=>{ if(step===0&&!sel.svc.length){ $('bErr').textContent='Pick at least one to roll the next scene.'; return } go(Math.min(2,step+1)) });
+  $('bBack').addEventListener('click',()=>go(Math.max(0,step-1)));
+  $('bSend').addEventListener('click',()=>{ if(!$('fName').value.trim()){ $('bErr').textContent='Add your name so I know who to call back.'; $('fName').focus(); return }
+    open('https://wa.me/918526462969?text='+encodeURIComponent(msg()),'_blank','noopener') });
+  $('bMail').addEventListener('click',e=>{ e.preventDefault(); const br=$('fBrand').value.trim();
+    location.href='mailto:ravindhardevaraj@gmail.com?subject='+encodeURIComponent('Project enquiry'+(br?' from '+br:''))+'&body='+encodeURIComponent(msg()) });
+  const openBrief=()=>{ lastFocus=document.activeElement; B.hidden=false; document.body.style.overflow='hidden'; go(0); setTimeout(()=>B.querySelector('.opts button').focus(),60) };
+  const closeBrief=()=>{ B.hidden=true; document.body.style.overflow=''; lastFocus&&lastFocus.focus() };
+  $('openBrief').addEventListener('click',openBrief); $('closeBrief').addEventListener('click',closeBrief);
+  B.addEventListener('click',e=>{ if(e.target===B) closeBrief() });
+  addEventListener('keydown',e=>{ if(e.key==='Escape'&&!B.hidden) closeBrief() });
   onScroll(); restartIdle();
 })();
 </script>
